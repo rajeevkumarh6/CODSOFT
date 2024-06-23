@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Welcome to Amazon Data Center</title>
+    <style>
+        body {
+            background-color: #f0f8ff; /* Light blue background */
+            font-family: Arial, sans-serif; /* Default font */
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+        .container {
+            margin-top: 50px;
+        }
+        .upload-btn {
+            background-color: #4CAF50; /* Green upload button */
+            border: none;
+            color: white;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin-top: 20px;
+            cursor: pointer;
+            border-radius: 8px;
+            transition: background-color 0.3s;
+        }
+        .upload-btn:hover {
+            background-color: #45a049; /* Darker green on hover */
+        }
+        h1 {
+            color: #008080; /* Dark teal for heading */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Welcome to Amazon Data Center</h1>
+        <form action="/upload" method="post" enctype="multipart/form-data">
+            <input type="file" name="file" id="file">
+            <label for="file" class="upload-btn">Upload Data File</label>
+            <br><br>
+            <input type="submit" value="Upload" class="upload-btn">
+        </form>
+    </div>
+</body>
+</html>

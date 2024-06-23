@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Amazon Sales Data Analysis Results</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f8ff;
+            color: #333;
+            text-align: center;
+            padding-top: 20px;
+        }
+        h1 {
+            font-size: 2.5em;
+            color: #0066cc;
+            margin-bottom: 20px;
+        }
+        h2 {
+            font-size: 2em;
+            color: #333;
+            margin-top: 40px;
+        }
+        p {
+            font-size: 1.2em;
+            color: #666;
+        }
+        .plot {
+            margin: 20px 0;
+        }
+        .btn {
+            display: inline-block;
+            margin-top: 30px;
+            padding: 10px 20px;
+            font-size: 18px;
+            color: white;
+            background-color: #4CAF50;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-decoration: none;
+        }
+        .btn:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <h1>Amazon Sales Data Analysis Results</h1>
+    
+    <h2>Yearly Sales Trend</h2>
+    <div class="plot">
+        <img src="{{ monthly_sales_plot }}" alt="Monthly Sales Trend">
+    </div>
+    
+    <h2>Sales by Product Category</h2>
+    <div class="plot">
+        <img src="{{ category_sales_plot }}" alt="Sales by Product Category">
+    </div>
+    
+    <h2>Sales Prediction</h2>
+    <div class="plot">
+        <img src="{{ prediction_plot }}" alt="Sales Prediction">
+    </div>
+    
+    <h2>Total Revenue by Country</h2>
+    <div class="plot">
+        <img src="{{ revenue_by_country_plot }}" alt="Total Revenue by Country">
+    </div>
+
+    <h2>Units Sold vs. Total Cost</h2>
+    <div class="plot">
+        <img src="{{ units_vs_cost_plot }}" alt="Units Sold vs. Total Cost">
+    </div>
+
+    <h2>Total Revenue, Total Cost, Total Profit</h2>
+    <div class="plot">
+        <img src="{{ bar_plot }}" alt="Total Revenue, Total Cost, Total Profit">
+    </div>
+
+    <h2>Total Revenue by Item Type</h2>
+    <div class="plot">
+        <img src="{{ barh_plot }}" alt="Total Revenue by Item Type">
+    </div>
+    
+    <h2>Total Profit by Item Type</h2>
+    <div class="plot">
+        <img src="{{ profit_by_item_plot }}" alt="Total Profit by Item Type">
+    </div>
+    <p>{{ comments['most_profitable_item'] }}</p>
+    <p>{{ comments['least_profitable_item'] }}</p>
+    
+    <h2>Total Profit per Year</h2>
+    <div class="plot">
+        <img src="{{ profit_per_year_plot }}" alt="Total Profit per Year">
+    </div>
+    <p>{{ comments['max_profit_year'] }}</p>
+    
+    <h2>Total Sales per Year</h2>
+    <div class="plot">
+        <img src="{{ sales_per_year_plot }}" alt="Total Sales per Year">
+    </div>
+    
+    <h2>Insights and Advice</h2>
+    <p>{{ comments['highest_sales_country'] }}</p>
+    <p>{{ comments['advice'] }}</p>
+    
+    <a href="/" class="btn">Upload another file</a>
+</body>
+</html>
